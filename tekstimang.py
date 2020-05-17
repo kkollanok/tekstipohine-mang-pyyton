@@ -3,6 +3,10 @@
 from time import sleep
 from sys import exit
 
+helistamine = "ei"   # - tingimuse kontroll, kasutusel funktsioonis KRUUSATEE_TELEFON
+mobiililevi = 0      # - levi loendur, kasutusel funktsioonis KRUUSATEE_TELEFON
+# kasutajanimi = ""    - mängija valitud nimi, kasutusel funktsioonis LÕPP_2
+
 #--------------- <        FUNKTSIOONID MÄNGU JAOKS         > ----------------
 
 def start():
@@ -33,12 +37,67 @@ def männimets():
     print("-> Kas sa soovid siseneda majja või liikuda mööda rada edasi? (maja / teerada)")
     
 def rannakaljud():
-    
+    sleep(0.5)
+    print("-> Soe liiv sinu jalge all krudisemas, alustad sa vaikselt kõnnakut mööda rannajoont edasi.")
+    sleep(4)
+    print("-> Mida lähemale jõuad, seda kõrgemad need kaljud tegelikusses paistavad.")
+    sleep(5)
+    print("-> Jalamile jõudes vaatled sa enda ees seiskuvat järsku tõusu ja väsimus võtab sinu üle võimust.")
+    sleep(6)
+    print("-> Ometi tõded sa endale, et midagi mõistlikumat teha ei ole ning sul on oluline teada saada, mis põhjusel sa siin ranna peal lebasid.")
+    sleep(6)
+    print("-> Tasapisi hakkad sa üles rühkima.")
+    sleep(4)
+    print("-> ...")
+    sleep(3)
+    print("-> ...")
+    sleep(2)
+    print("-> ...")
+    sleep(1)
+    print("-> ...")
+    sleep(0.5)
+    print("-> Nüüdseks tipus, viskad sa ennast maha ja võtad kena minuti enne kui ennast uuesti püsti ajad.")
+    sleep(5)
+    print("-> Sinu ees avaneb suurepärane vaade ümbruskonnale: ühelt poolt vaikne meri, teiselt poolt näivalt lõppematu männimets.")
+    sleep(4)
+    print("-> Neid kahti ühendab rand, mis ulatub ühest horisondist teise.")
+    sleep(4)
+    print("-> Metsa sees on näha erinevad lagendikke, kuid need ei sobi kokku tiheda metsamustriga, mis paneb sind kahtlustama, et siin on hiljuti tehtud raiet.")
+    sleep(7)
+    print("-> Suurimatest lagendikest veidike vasakule on näha midagi, mis meenutab mingi hoone katust, ning edasisel uurimisel selgub metsa äärel üks autotee, mis just maja juurde viib.")
+    sleep(6)
+    print("-> Tahe maja juurde rutata on suur, kuid sama suur on ka sinu kahtlustunne - sul ei ole õrna aimugi kus sa oled, ning mis siin toimub.")
+    sleep(5)
+    print("-> Kas sa soovid veel ringi vaadata või maja juurde minna? (maja / vaatan veel ringi)")
+
 def rannakaljud_ringivaatamine():
+    sleep(0.5)
+    print("-> Vahest on tõesti parem veel veidike ringi vaadata.")
+    sleep(3)
+    print("-> Sa alustad mere kammimisega - vahest sattusid sa siia mingist laevast?")
+    sleep(5)
+    print("-> Kuid merest ei ole näha miskit. Enne kui sa aga enda pilgu pöörad, märkad sa midagi enda silmanurgast.")
+    sleep(4)
+    print("-> Kalju all, ranna peal lebab kinnitatult väike paat ning selle kõrval üks kuur.")
+    sleep(5)
+    print("-> Need on nutikalt ehitatud ühe kivinuki taha, nii et neid ei ole ranna pealt võimalik märgata, aga ülevalt avaneb sulle kogu vaatepilt.")
+    sleep(5)
+    print("-> See on kindlasti midagi huvitava...")
+    sleep(1.5)
+    print("-> Äkitselt tunned, kuidas keegi sind täiest jõust tagant lükkab.")
+    sleep(3)
+    print("-> Sa kaotad tasakaalu üle kontrolli ning koperdad pea ees üle kaljuääre.")
+    sleep(4)
+    print("-> Langemine ei võta kaua ning sa olid nii ehmunud, nii et ei suutnud olukordast kinni haarata, enne kui...")
+    sleep(4)
+    print("-> ...sa rind ees vastu maad lendasid.")
+    sleep(2)
 
 def tee_rannakaljudest_majja():
+    return(0)
 
 def tee_majast_rannakaljudesse():
+    return(0)
     
 def maja():
     sleep(0.5)
@@ -87,6 +146,7 @@ def kelder():
     print("-> Kumma sa valid? (mobiiltelefon / leegiheitja)")
     
 def teine_korrus():
+    return(0)
     
 def mobiiltelefon():
     sleep(0.5)
@@ -111,12 +171,14 @@ def mobiiltelefon():
     print("-> Kas soovid liikuda rannakaljude juurde või järgida kruusateed? (rannakaljud / kruusatee)")
     
 def leegiheitja():
+    return(0)
     
 def magamistuba():
+    return(0)
     
 def kruusatee_telefon():
-    mobiililevi = 0
-    helistamine = "ei"
+    global helistamine
+    global mobiililevi
     sleep(0.5)
     print("\n-> Sa hakkad mööda teed kiirkõnnil edasi liikuma.")
     sleep(3)
@@ -143,7 +205,9 @@ def kruusatee_telefon():
             sleep(4)
             lõpp_3()
     print("-> Esimese refleksina sisestad numbrivalikusse 112, kuid tekstiparandussüsteem automaatselt korrigeerib selle mingiks teiseks numbriks, mida sa ei tunne.")
+    sleep(6)
     print("-> Sisestades 911 süsteem aga midagi ei paranda, nii et sellele on võimalik helistada.")
+    sleep(5)
     print("-> Telefon kutsub...")
     sleep(12 / mobiililevi)
     if mobiililevi > 2:
@@ -153,12 +217,16 @@ def kruusatee_telefon():
     sleep(3)
     
 def kruusatee_leegiheitja():
+    return(0)
     
 def magamistoast_kruusateele():
+    return(0)
     
 def magamistoast_rannakaljudele():
+    return(0)
             
 def lõpp_1():
+    print("->")
 
 def lõpp_2():
     print("-> Kõne on ühendatud, kuid mitte midagi ei ole kuulda. 'Hallo?' ütled sa torusse.")
@@ -179,6 +247,7 @@ def lõpp_2():
     sleep(5)
     
 def lõpp_3():
+    return(0)
 
 def lõpp():
     print("\nLÕPP!")
