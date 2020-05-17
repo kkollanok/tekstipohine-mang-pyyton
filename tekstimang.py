@@ -259,5 +259,5 @@ def lõpp():
 
 
 #--------------- <                MÄNGU KOOD               > ----------------
-
+omgomgomgomgomgomg
 #--------------- <                MÄNGU KOOD               > ----------------
