@@ -3,10 +3,6 @@
 from time import sleep
 from sys import exit
 
-helistamine = "ei"   # - tingimuse kontroll, kasutusel funktsioonis KRUUSATEE_TELEFON
-mobiililevi = 0      # - levi loendur, kasutusel funktsioonis KRUUSATEE_TELEFON
-# kasutajanimi = ""    - mängija valitud nimi, kasutusel funktsioonis LÕPP_2
-
 #--------------- <        FUNKTSIOONID MÄNGU JAOKS         > ----------------
 
 def start():
@@ -69,7 +65,7 @@ def rannakaljud():
     print("-> Tahe maja juurde rutata on suur, kuid sama suur on ka sinu kahtlustunne - sul ei ole õrna aimugi kus sa oled, ning mis siin toimub.")
     sleep(5)
     print("-> Kas sa soovid veel ringi vaadata või maja juurde minna? (maja / vaatan veel ringi)")
-
+    
 def rannakaljud_ringivaatamine():
     sleep(0.5)
     print("-> Vahest on tõesti parem veel veidike ringi vaadata.")
@@ -92,12 +88,12 @@ def rannakaljud_ringivaatamine():
     sleep(4)
     print("-> ...sa rind ees vastu maad lendasid.")
     sleep(2)
-
+    
 def tee_rannakaljudest_majja():
-    return(0)
-
+    print("ok")
+    
 def tee_majast_rannakaljudesse():
-    return(0)
+    print("ok")
     
 def maja():
     sleep(0.5)
@@ -146,7 +142,7 @@ def kelder():
     print("-> Kumma sa valid? (mobiiltelefon / leegiheitja)")
     
 def teine_korrus():
-    return(0)
+    print("ok")
     
 def mobiiltelefon():
     sleep(0.5)
@@ -171,14 +167,14 @@ def mobiiltelefon():
     print("-> Kas soovid liikuda rannakaljude juurde või järgida kruusateed? (rannakaljud / kruusatee)")
     
 def leegiheitja():
-    return(0)
+    print("ok")
     
 def magamistuba():
-    return(0)
+    print("ok")
     
 def kruusatee_telefon():
-    global helistamine
-    global mobiililevi
+    mobiililevi = 0
+    helistamine = "ei"
     sleep(0.5)
     print("\n-> Sa hakkad mööda teed kiirkõnnil edasi liikuma.")
     sleep(3)
@@ -205,9 +201,7 @@ def kruusatee_telefon():
             sleep(4)
             lõpp_3()
     print("-> Esimese refleksina sisestad numbrivalikusse 112, kuid tekstiparandussüsteem automaatselt korrigeerib selle mingiks teiseks numbriks, mida sa ei tunne.")
-    sleep(6)
     print("-> Sisestades 911 süsteem aga midagi ei paranda, nii et sellele on võimalik helistada.")
-    sleep(5)
     print("-> Telefon kutsub...")
     sleep(12 / mobiililevi)
     if mobiililevi > 2:
@@ -217,17 +211,17 @@ def kruusatee_telefon():
     sleep(3)
     
 def kruusatee_leegiheitja():
-    return(0)
+    print("ok")
     
 def magamistoast_kruusateele():
-    return(0)
+    print("ok")
     
 def magamistoast_rannakaljudele():
-    return(0)
-            
+    print("ok")
+    
 def lõpp_1():
     print("->")
-
+    
 def lõpp_2():
     print("-> Kõne on ühendatud, kuid mitte midagi ei ole kuulda. 'Hallo?' ütled sa torusse.")
     sleep(3)
@@ -247,17 +241,77 @@ def lõpp_2():
     sleep(5)
     
 def lõpp_3():
-    return(0)
-
+    print("ok")
+    
 def lõpp():
     print("\nLÕPP!")
     print("Kas soovid uuesti mängida?")
-
-
+    
 #--------------- <         FUNKTSIOONID MÄNGU JAOKS        > ----------------
     
 
 
 #--------------- <                MÄNGU KOOD               > ----------------
-omgomgomgomgomgomg
+
+start()
+
+stardivalik = input("> ")                        #kas männimets v rannakaljud
+if stardivalik == "männimets":
+    männimets()                        
+elif stardivalik == "rannakaljud":
+    rannakaljud()
+else:
+    print("mh")
+ 
+maja_teerajavalik = input("> ")                  #stardivalikust valiti MÄNNIMETS
+if maja_teerajavalik == "maja":
+    maja()
+elif maja_teerajavalikk == "teerada":
+    tee_majast_rannakaljudesse()
+else:
+    print("mh")
+
+üles_allavalik = input("> ")                     #maja ja teeraja valikust valiti MAJA
+if üles_allavalik == "üles":
+    üles()
+elif üles_allavalik == "alla":
+    alla()
+else:
+    print("mh")
+    
+mobiil_leegiheitjavalik = input("> ")            #majast valiti ALLA(kelder)
+if mobiil_leegiheitjavalik == "mobiiltelefon":
+    mobiiltelefon()
+elif mobiil_leegiheitjavalik == "leegiheitja":
+    leegiheitja()
+else:
+    print("mh")
+    
+telefoni_rannakalju_kruusatee = input("> ")      #keldrist võeti TELEFON, kas nüüd rannakalju või kruusatee juurde
+if telefoni_rannakalju_kruusatee == "rannakaljud":
+    rannakalju()
+elif telefoni_rannakalju_kruusatee == "kruusatee":
+    kruusatee_telefon()
+else:
+    print("mh")
+
+maja_ringivaatamisevalik = input("> ")                            #stardivalikust valiti RANNAKALJUD
+if maja_ringivaatamisevalik == "vaatan veel ringi":
+    rannakaljud_ringivaatamine()        #LÕPP
+elif maja_ringivaatamisevalik == "maja":
+    tee_rannakaljudest_majja()     
+else:
+    print("mh")
+    
+ = input("> ")
+if  == "":
+    ()
+elif  == "":
+    ()
+else:
+    print("mh")
+
+
+
+
 #--------------- <                MÄNGU KOOD               > ----------------
